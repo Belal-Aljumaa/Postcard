@@ -1,0 +1,329 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0e191;
+}
+.container .letter {
+  position: relative;
+  cursor: pointer;
+  animation: bounce 4s ease infinite;
+}
+.container .letter .back {
+  position: relative;
+  width: 320px;
+  height: 200px;
+  background-color: #fff;
+}
+.container .letter .card {
+  content: "";
+  position: absolute;
+  background-color: #fff;
+  width: 300px;
+  height: 180px;
+  top: 10px;
+  left: 10px;
+}
+.container .letter .card .text {
+  color: #000;
+  text-align: center;
+  font-size: 28px;
+  margin: 10px;
+  margin-top: 75px;
+  font-weight: bold;
+}
+.container .letter .card .text a:hover {
+  color: red;
+}
+.container .letter .bottom {
+  content: "";
+  position: absolute;
+  border-bottom: 100px solid #A6A6A6;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  top: 100px;
+  left: 0;
+  z-index: 999;
+}
+.container .letter .right {
+  content: "";
+  position: absolute;
+  border-bottom: 100px solid transparent;
+  border-top: 100px solid transparent;
+  height: 0;
+  width: 0;
+  border-left: 161px solid transparent;
+  border-right: 161px solid #F2F2F2;
+  top: 0px;
+  left: -2px;
+  z-index: 999;
+}
+.container .letter .left {
+  content: "";
+  position: absolute;
+  border-bottom: 100px solid transparent;
+  border-top: 100px solid transparent;
+  height: 0;
+  width: 0;
+  border-right: 161px solid transparent;
+  border-left: 161px solid #F2F2F2;
+  top: 0px;
+  left: 0px;
+  z-index: 999;
+}
+.container .letter .top {
+  content: "";
+  position: absolute;
+  border-top: 100px solid #FFFFFF;
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  height: 0;
+  width: 0;
+  top: 0;
+}
+.container .letter .top:after {
+  content: "";
+  position: absolute;
+  color: #fff;
+  font-size: 48px;
+  background-color: #747474;
+  padding: 20px;
+  border-radius: 50%;
+  left: -20px;
+  top: -15px;
+  z-index: 999;
+}
+.container .letter .shadow {
+  content: "";
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.1);
+  width: 310px;
+  height: 10px;
+  top: 220px;
+  border-radius: 50%;
+  animation: scale 4s linear infinite;
+}
+.container .letter:hover .top {
+  transform: rotateX(180deg);
+  top: -100px;
+}
+.container .letter:hover .card {
+  transform: translateY(-100px);
+  z-index: 99;
+}
+@keyframes bounce {
+  0% {
+    transform: scale(1, 1) translateY(0);
+  }
+  10% {
+    transform: scale(1.1, 0.9) translateY(0);
+  }
+  30% {
+    transform: scale(0.9, 1.1) translateY(-55px);
+  }
+  50% {
+    transform: scale(1.05, 0.95) translateY(0);
+  }
+  58% {
+    transform: scale(1, 1) translateY(-7px);
+  }
+  65% {
+    transform: scale(1, 1) translateY(0);
+  }
+  100% {
+    transform: scale(1, 1) translateY(0);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scaleX(1);
+  }
+  10% {
+    transform: scaleX(1);
+  }
+  30% {
+    transform: scaleX(0.5);
+  }
+  50% {
+    transform: scaleX(1.1);
+  }
+  58% {
+    transform: scaleX(1);
+  }
+  75% {
+    transform: scaleX(0.98);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url(https://www.urlaubstracker.de/wp-content/uploads/2019/02/malediven-strand-meer-blau.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.content .post {
+  position: relative;
+  width: 1000px;
+  height: 700px;
+}
+.content .post .post-card {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3), 10px 18px 20px rgba(0, 0, 0, 0.3);
+}
+.content .post .post-card .title {
+  content: "";
+  position: absolute;
+  margin-top: 30px;
+  left: 550px;
+  font-size: 30px;
+}
+.content .post .post-card .column {
+  content: "";
+  position: absolute;
+  width: 3px;
+  height: 500px;
+  background-color: #333;
+  left: 625px;
+  top: 100px;
+}
+.content .post .post-card .rows {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 175px;
+  background-color: #333;
+  top: 335px;
+  left: 710px;
+  box-shadow: 0 30px #333, 0 60px #333, 0 90px #333;
+}
+.content .post .post-card .address {
+  position: relative;
+  top: 75px;
+  left: 360px;
+}
+.content .post .post-card .address .name {
+  content: "";
+  position: absolute;
+  left: 350px;
+  top: 235px;
+  font-size: 22px;
+}
+.content .post .post-card .address .street {
+  content: "";
+  position: absolute;
+  left: 350px;
+  top: 265px;
+  font-size: 22px;
+}
+.content .post .post-card .address .city {
+  content: "";
+  position: absolute;
+  left: 350px;
+  top: 295px;
+  font-size: 22px;
+}
+.content .post .post-card .address .country {
+  content: "";
+  position: absolute;
+  left: 350px;
+  top: 325px;
+  font-size: 22px;
+}
+.content .post .post-card .square {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 85px;
+  border: 5px solid #333;
+  outline-style: dashed;
+  outline-color: #333;
+  background-color: #ffde9c;
+  top: 75px;
+  left: 850px;
+}
+.content .post .post-card .circle {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  border-style: dashed;
+  width: 50px;
+  height: 50px;
+  top: 140px;
+  left: 825px;
+}
+.content .post .post-card .greetings {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 150px;
+  font-weight: bold;
+  font-size: 22px;
+}
+.content .post .post-card .quotation {
+  content: "";
+  position: absolute;
+  left: 100px;
+  top: 400px;
+  font-size: 20px;
+  padding: 10px;
+  border: 2px dashed;
+}
+.content .post .post-card .umbrella {
+  content: "";
+  position: absolute;
+  top: 575px;
+  left: 450px;
+  font-size: 120px;
+}
+.content .post .post-card .water {
+  content: "";
+  position: absolute;
+  top: 630px;
+  left: 350px;
+  font-size: 75px;
+  color: rgb(106, 218, 255);
+}
+.content .post .post-card .water1 {
+  content: "";
+  position: absolute;
+  top: 630px;
+  left: 265px;
+  font-size: 75px;
+  color: rgb(106, 218, 255);
+}
+.content .post .post-card .water2 {
+  content: "";
+  position: absolute;
+  top: 630px;
+  left: 180px;
+  font-size: 75px;
+  color: rgb(106, 218, 255);
+}
+.content .post .post-card .sun {
+  content: "";
+  position: absolute;
+  font-size: 75px;
+  top: 525px;
+  left: 100px;
+  color: rgb(255, 255, 125);
+}
+
+/*# sourceMappingURL=main.css.map */
