@@ -330,8 +330,8 @@
       .umbrella {
         content: "";
         position: absolute;
-        top: 575px;
-        left: 450px;
+        top: 550px;
+        left: 460px;
         font-size: 120px;
       }
 
@@ -366,9 +366,15 @@
         content: "";
         position: absolute;
         font-size: 75px;
-        top: 525px;
-        left: 100px;
+        top: 500px;
+        left: 150px;
         color: rgb(255, 255, 125);
+      }
+
+      .island {
+        content: "";
+        position: absolute;
+        top: 550px;
       }
     }
 
