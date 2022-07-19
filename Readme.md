@@ -13,4 +13,4 @@
 **:point_right: [Live Version](https://belal-aljumaa.github.io/Postcard/)**
 
 
-![BMW](images/postcard.gif)
+![postcard](images/postcard.gif)
